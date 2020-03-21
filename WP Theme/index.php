@@ -1,44 +1,84 @@
-<?php get_header(); ?>
+<?php  get_header();
+require_once('components/navbar.inc.php');
+?>
 
-<!--Carousel Wrapper-->
-<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-        <!--First slide-->
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
-        </div>
-        <!--/First slide-->
-        <!--Second slide-->
-        <div class="carousel-item">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
-        </div>
-        <!--/Second slide-->
-        <!--Third slide-->
-        <div class="carousel-item">
-            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
-        </div>
-        <!--/Third slide-->
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
+<!--Main layout-->
+    <main>
+        <div class="container">
 
-<?php get_footer(); ?>
+            <!--Section: Dynamic Content Wrapper-->
+            <section>
+              <div id="dynamic-content"></div>
+
+            </section>
+            <!--Section: Dynamic Content Wrapper-->
+
+            <!--Section: Articles-->
+            <section class="text-center">
+
+                <!--Section heading-->
+                <h1 class="h2 font-weight-bold my-4">Recent articles</h1>
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+                    <?php
+                    if ( have_posts() ) {
+                    $counter = 1;
+                    while ( have_posts() ) {
+                    the_post();
+                    ?>
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <!--Featured image-->
+                        <div class="view overlay hm-white-slight rounded z-depth-2 mb-4">
+                            <?php the_post_thumbnail( 'medium-large', array( 'class'=> 'img-fluid')); ?>
+                            <a href="<?php echo get_permalink() ?>">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+
+                        <!--Excerpt-->
+                        <a href="" class="pink-text">
+                            <h6 class="mb-3 mt-4">
+                                <i class="fa fa-bolt"></i>
+                                <strong> <?php the_category(', '); ?></strong>
+                            </h6>
+                        </a>
+                        <h4 class="mb-3 font-weight-bold dark-grey-text">
+                            <strong><?php the_title(); ?></strong>
+                        </h4>
+                        <p>by
+                            <a href="<?php echo get_permalink() ?>" class="font-weight-bold dark-grey-text"><?php echo get_the_author(); ?></a>, <?php echo get_the_date(); ?></p>
+                        <p class="grey-text"><?php the_excerpt(); ?></p>
+                        <a href="<?php echo get_permalink() ?>" class="btn btn-info btn-rounded btn-md">Read more</a>
+                    </div>
+                    <!--Grid column-->
+
+                    <?php
+                    if ($counter % 3 == 0) {
+                    ?>
+                 </div>
+                <!--Grid row-->
+                <!--Grid dynamic row-->
+                <div class="row wow fadeIn">
+                    <?php
+                    }
+                        $counter++;
+                    } // end while
+                    } // end if
+                    ?>
+                </div>
+                <!--Grid row-->
+
+                <!--Pagination -->
+                <?php mdb_pagination(); ?>
+
+            </section>
+            <!--Section: Articles-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+<?php  get_footer(); ?>
