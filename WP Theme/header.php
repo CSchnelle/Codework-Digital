@@ -20,8 +20,8 @@
             <div class="container">
 
                 <!-- Brand Left -->
-                <a class="navbar-brand pt-0 waves-effect">
-                    <img src="wp-content/themes/madesimple/assets/img/logo.png" alt="Logo">
+                <a class="navbar-brand pt-0 waves-effect" href="<?php bloginfo( 'url' ) ?>">
+                    <img src="wp-content/themes/madesimple/assets/img/logo.png" alt="Logo" rel="homepage">
                 </a>
 
                 <!-- Collapse -->
@@ -50,7 +50,7 @@
 
                     <!-- Right -->
                     <ul class="navbar-nav nav-flex-icons">
-                        <li>
+                        <li class="nav-item">
                             <?php get_search_form(); ?>
                         </li>
                         <li class="nav-item">
