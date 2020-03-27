@@ -1,5 +1,5 @@
 /*
-Theme Name: The Talk Made Simple
+Theme Name: Made Simple
 Theme URI: See Codework Digital
 Description: This is outstanding WP theme developed on Material Design for Bootstrap 4 by the Codework Digital team
 Version: 1.0.0
@@ -7,7 +7,7 @@ Author: Codework Digital
 */
 
 .page-footer {
-    background-color: #114A7C; 
+    background-color: #1a1a1a; 
 }
   
 .blue-gradient {
@@ -59,4 +59,9 @@ body {
 .front-page-hero {
     padding-top: 225px;
 
+}
+
+section {
+    padding-top: 75px;
+    padding-bottom: 75px;
 }

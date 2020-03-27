@@ -33,11 +33,12 @@
 
 <!--Main layout-->
     <main>
-        <div class="container">
-
-        
-
-        </div>
+        <section class="indigo grey lighten-2">
+            <div class="container text-center">
+                <h1 class="font-weight-bold">Let us help you.</h1>
+                
+            </div>
+        </section>
     </main>
     <!--Main layout-->
 

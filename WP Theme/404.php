@@ -7,9 +7,7 @@
  * @since 1.0.0
  */
 
-get_header();
-require_once('components/navbar.inc.php');
-?>
+get_header();?>
 
 <!--Main layout-->
     <main class="min-vh-80">

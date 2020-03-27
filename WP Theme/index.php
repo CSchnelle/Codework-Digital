@@ -1,6 +1,4 @@
-<?php  get_header();
-require_once('components/navbar.inc.php');
-?>
+<?php  get_header();?>
 
 <!--Main layout-->
     <main>
