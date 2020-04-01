@@ -6,7 +6,7 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 </script>
 
 <!--Footer-->
-<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+<footer class="page-footer text-center font-small wow fadeIn">
 
     <!--Call to action-->
     <div class="pt-4">
