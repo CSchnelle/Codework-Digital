@@ -6,7 +6,7 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 </script>
 
 <!--Footer-->
-<footer class="page-footer text-center font-small wow fadeIn">
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
 
     <!--Call to action-->
     <div class="pt-4">
@@ -59,8 +59,8 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-        © 2020 Copyright:
-        <a href="https://thetalkmadesimple.com" target="_blank"> The Talk Made Simple </a>
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
     </div>
     <!--/.Copyright-->
 </html>
