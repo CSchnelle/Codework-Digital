@@ -237,6 +237,25 @@
             </div>
         </section>
 
+        <section>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="jumbotron jumbotron-fluid">
+                            <h6>About Me</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
     <!--Main layout-->
 
