@@ -25,6 +25,16 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 function mdbtheme_setup() {
         // Add featured image support
         add_theme_support('post-thumbnails');
+        
+        // Add custom logo support
+        $defaults = array(
+          'height'      => 25,
+          'width'       => 235,
+          'flex-height' => true,
+          'flex-width'  => true,
+          'header-text' => array( 'site-title', 'site-description' ),
+          );
+        add_theme_support('custom-logo', $defaults );
     }
 add_action('after_setup_theme', 'mdbtheme_setup');
 

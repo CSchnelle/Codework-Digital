@@ -5,10 +5,6 @@ Description: This is outstanding WP theme developed on Material Design for Boots
 Version: 1.0.0
 Author: Codework Digital
 */
-
-.page-footer {
-    background-color: #1a1a1a; 
-}
   
 .blue-gradient {
     background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
@@ -87,7 +83,7 @@ section {
 */
 
 .flickity-page-dots .dot{
-    background-color: #303f9f;
+    background-color: #7283a7;
 }
 
 @media only screen and (max-width: 992px){

@@ -4,9 +4,9 @@
  *
  * This template can be overridden by copying it to yourtheme/learnpress/loop/course/loop-begin.php.
  *
- * @author  Codework Digital
- * @package  The_Talke
- * @version  1.0.0
+ * @author  ThimPress
+ * @package  Learnpress/Templates
+ * @version  3.0.0
  */
 
 /**

@@ -21,7 +21,11 @@
 
                 <!-- Brand Left -->
                 <a class="navbar-brand pt-0 waves-effect" href="<?php bloginfo( 'url' ) ?>">
-                    <img src="wp-content/themes/madesimple/assets/img/logo.png" alt="Logo" rel="homepage">
+                    <?php
+                        if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                        }
+                    ?>
                 </a>
 
                 <!-- Collapse -->
@@ -33,26 +37,23 @@
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <ul class="navbar-nav mr-auto font-weight-bolder">
-                    <?php
-                    $args = array(
-                        'theme_location' => 'header-menu',
-                        'depth' => 2,
-                        'container' => false,
-                        'menu_class' => 'navbar-nav mr-auto',
-                        'walker' => new Bootstrap_Walker_Nav_Menu()
-                    );
-                    if (has_nav_menu('header-menu')) {
-                        wp_nav_menu($args);
-                    }
-                    ?>
+                    <!-- Right -->
+                    <ul class="navbar-nav ml-auto font-weight-bolder">
+                        <?php
+                        $args = array(
+                            'theme_location' => 'header-menu',
+                            'depth' => 2,
+                            'container' => false,
+                            'menu_class' => 'navbar-nav mr-auto',
+                            'walker' => new Bootstrap_Walker_Nav_Menu()
+                        );
+                        if (has_nav_menu('header-menu')) {
+                            wp_nav_menu($args);
+                        }
+                        ?>
                     </ul>
 
-                    <!-- Right -->
                     <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item">
-                            <?php get_search_form(); ?>
-                        </li>
                         <li class="nav-item">
                             <a href="https://www.facebook.com/" class="nav-link waves-effect" target="_blank">
                                 <i class="fab fa-facebook-f fa-lg"></i>

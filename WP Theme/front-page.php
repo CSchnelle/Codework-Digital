@@ -43,7 +43,119 @@
                     <div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "freeScroll": true, "contain": true }'>
                         <div class="cell">
                          <!--Card-->
-                            <div class="card indigo">
+                            <div class="card mdb-color lighten-2">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg" class="card-img-top" alt="photo">
+                                <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title white-text">Course 1</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
+                            </div>
+
+                            </div>
+                            <!--/.Card-->
+                        
+                        </div>
+
+                        <div class="cell">
+                         <!--Card-->
+                            <div class="card mdb-color lighten-2">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
+                                <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title white-text">Course 2</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
+                            </div>
+
+                            </div>
+                            <!--/.Card-->
+                        
+                        </div>
+
+                        <div class="cell">
+                         <!--Card-->
+                            <div class="card mdb-color lighten-2">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(123).jpg" class="card-img-top" alt="photo">
+                                <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title white-text">Course 3</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
+                            </div>
+
+                            </div>
+                            <!--/.Card-->
+                        
+                        </div>
+
+                        <div class="cell">
+                         <!--Card-->
+                            <div class="card mdb-color lighten-2">
+
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg" class="card-img-top" alt="photo">
+                                <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Title-->
+                                <h4 class="card-title white-text">Course 4</h4>
+                                <!--Text-->
+                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
+                            </div>
+
+                            </div>
+                            <!--/.Card-->
+                        
+                        </div>
+
+                        <div class="cell">
+                         <!--Card-->
+                            <div class="card mdb-color lighten-2">
 
                             <!--Card image-->
                             <div class="view">
@@ -56,7 +168,7 @@
                             <!--Card content-->
                             <div class="card-body text-center">
                                 <!--Title-->
-                                <h4 class="card-title white-text">News title</h4>
+                                <h4 class="card-title white-text">Course 5</h4>
                                 <!--Text-->
                                 <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
@@ -68,10 +180,7 @@
                             <!--/.Card-->
                         
                         </div>
-                        <div class="cell"><img src="wp-content/themes/madesimple/assets/img/test.jpg"></div>
-                        <div class="cell"><img src="wp-content/themes/madesimple/assets/img/test.jpg"></div>
-                        <div class="cell"><img src="wp-content/themes/madesimple/assets/img/test.jpg"></div>
-                        <div class="cell"><img src="wp-content/themes/madesimple/assets/img/test.jpg"></div>
+
                     </div>
                 </div>
             </div>
@@ -79,136 +188,55 @@
 
         <section class="indigo grey lighten-2">
             <div class="container">
-                <!-- Column layout -->
-                <h4 class="text-center py-4">Two equal columns layout</h4>
-                <!-- Grid row -->
-                <div class="row">
 
-                <!-- Grid column -->
-                <div class="col-md-6 mb-4">
+                <!-- Jumbotron -->
+                <div class="jumbotron mb-0 text-center indigo white-text">
 
-                    <!--Card-->
-                    <div class="card indigo">
+                    <!-- Title -->
+                    <h2 class="card-title mb-5 h2">It's time to get started!</h2>
 
-                    <!--Card image-->
-                    <div class="view">
-                        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo">
-                        <a href="#">
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
+                    <!-- Row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-1">
+                            <!-- Subtitle -->
+                            <p class="my-1 h6">Course Curriculum</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-1">
+                            <!-- Subtitle -->
+                            <p class="my-1 h6">Information That Works</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 mb-1">
+                            <!-- Subtitle -->
+                            <p class="my-1 h6">Your Trusted Source</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+                        </div>
+                        <!-- Grid column -->
+
                     </div>
+                    <!-- Row -->
 
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Title-->
-                        <h4 class="card-title white-text">News title</h4>
-                        <!--Text-->
-                        <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                        <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                    </div>
+                    <hr class="my-4 rgba-white-light">
 
+                    <div class="pt-2">
+                    <button type="button" class="btn btn-outline-white">Sign up now</button>
                     </div>
-                    <!--/.Card-->
 
                 </div>
-                <!-- Grid column -->
+                <!-- Jumbotron -->
 
-                <!-- Grid column -->
-                <div class="col-md-6 mb-4">
-
-                    <!--Card-->
-                    <div class="card indigo">
-
-                    <!--Card image-->
-                    <div class="view">
-                        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
-                        <a href="#">
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Title-->
-                        <h4 class="card-title white-text">News title</h4>
-                        <!--Text-->
-                        <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                        <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                    </div>
-
-                    </div>
-                    <!--/.Card-->
-
-                </div>
-                <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
-
-                <h4 class="text-center py-4">Three equal columns layout</h4>
-
-                <!-- Grid row -->
-                <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-12 mb-4">
-
-                    <!--Card Primary-->
-                    <div class="card mdb-color text-center z-depth-2">
-                    <div class="card-body">
-                        <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>First column</strong></h3>
-                        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-                        qui in ea voluptate non proident velit esse quam. </p>
-                    </div>
-                    </div>
-                    <!--/.Card Primary-->
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card Primary-->
-                    <div class="card red darken-4 text-center z-depth-2">
-                    <div class="card-body">
-                        <h3 class="text-uppercase font-weight-bold light-green-text mt-2 mb-3"><strong>Second column</strong></h3>
-                        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-                        qui in ea voluptate non proident velit esse quam. </p>
-                    </div>
-                    </div>
-                    <!--/.Card Primary-->
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 mb-4">
-
-                    <!--Card Primary-->
-                    <div class="card light-blue darken-1 text-center z-depth-2">
-                    <div class="card-body">
-                        <h3 class="text-uppercase font-weight-bold purple-text mt-2 mb-3"><strong>Third column</strong></h3>
-                        <p class="white-text mb-0">Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis
-                        suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit
-                        qui in ea voluptate non proident velit esse quam. </p>
-                    </div>
-                    </div>
-                    <!--/.Card Primary-->
-
-                </div>
-                <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
             </div>
         </section>
+
     </main>
     <!--Main layout-->
 
