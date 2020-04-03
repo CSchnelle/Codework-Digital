@@ -17,7 +17,7 @@
                     <p class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
                     </p>
-                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-indigo btn-lg mt-4">Get Started for Free</a>
+                    <a target="_blank" href="http://thetalkmadesimple.com/courses/?cs_preview" class="btn btn-indigo btn-lg mt-4">Get Started</a>
                 </div>
                 <!--Grid column-->
 
@@ -187,10 +187,10 @@
         </section>
 
         <section class="indigo grey lighten-2">
-            <div class="container">
+            <div class="container px-0">
 
                 <!-- Jumbotron -->
-                <div class="jumbotron mb-0 text-center indigo white-text">
+                <div class="jumbotron mb-0 text-center indigo white-text rounded">
 
                     <!-- Title -->
                     <h2 class="card-title mb-5 h2">It's time to get started!</h2>
@@ -239,16 +239,32 @@
 
         <section>
             <div class="container">
-                <div class="row">
+                <div class="row rounded z-depth-1">
 
-                    <div class="col-md-6">
-                        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="img-fluid" alt="Responsive image">
+                    <div class="col-md-4 p-0">
+                        <img src="<?php echo get_bloginfo('template_url') ?>/assets/img/about-me.jpg" class="img-fluid z-depth-1 rounded" alt="Profile Picture">
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="jumbotron jumbotron-fluid">
-                            <h6>About Me</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+                    <div class="col-md-8 py-5">
+                        <div class="container">
+                            <div class="mx-3">
+                                <p class="h4 pb-3">About Me</p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio 
+                                exercitationem delectus qui, quas eum architecto, amet quasi accusantium. Sed ut perspiciatis unde omnis 
+                                iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab 
+                                illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+                                quia voluptas.
+                                </p>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio 
+                                exercitationem delectus qui, quas eum architecto, amet quasi accusantium. Sed ut perspiciatis unde omnis 
+                                iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab 
+                                illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+                                quia voluptas.
+                                </p>
+
+                            </div>
                         </div>
                     </div>
 
