@@ -10,7 +10,7 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 
     <!--Call to action-->
     <div class="pt-4">
-        <a class="btn btn-outline-white" href="https://thetalkmadesimple.com/termsandconditions.html" target="_blank" role="button">Terms & Conditions
+        <a class="btn btn-outline-white" href="http://thetalkmadesimple.com/terms-conditions/" target="_blank" role="button">Terms & Conditions
             </i>
         </a>
         
