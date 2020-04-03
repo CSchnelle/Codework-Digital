@@ -93,13 +93,13 @@ section {
 }
 
 @media only screen and (max-width: 768px){
-  .cell {
-      width: 70%;
+    .cell {
+        width: 70%;
   }
 }
 
 @media only screen and (max-width: 768px){
-  .cell {
-      width: 80%;
+    .cell {
+        width: 80%;
   }
 }
