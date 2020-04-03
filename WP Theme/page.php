@@ -9,7 +9,7 @@ the_post();
 
 <!--Main layout-->
 <main>
-    <div class="container">
+    <div class="container min-vh-100">
 
         <!--Section: Post-->
         <section class="mt-3">

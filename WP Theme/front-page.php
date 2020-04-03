@@ -17,6 +17,7 @@
                     <p class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
                     </p>
+                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-indigo btn-lg mt-4">Get Started for Free</a>
                 </div>
                 <!--Grid column-->
 

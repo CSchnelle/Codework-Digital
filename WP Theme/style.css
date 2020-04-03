@@ -27,6 +27,10 @@ Author: Codework Digital
     height: 20px; 
 }
 
+.nav-item.active>.nav-link {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
 .pagination .page-item.active .page-link {
     background-color: #09c; 
 }
