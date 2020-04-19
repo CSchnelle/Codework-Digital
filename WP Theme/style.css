@@ -27,10 +27,6 @@ Author: Codework Digital
     height: 20px; 
 }
 
-.nav-item.active>.nav-link {
-    background-color: rgba(0, 0, 0, 0) !important;
-}
-
 .pagination .page-item.active .page-link {
     background-color: #09c; 
 }
@@ -106,4 +102,78 @@ section {
     .cell {
         width: 80%;
   }
+}
+
+/* User Profile Button colors */
+.um .um-field-group-head,
+.picker__box,
+.picker__nav--prev:hover,
+.picker__nav--next:hover,
+.um .um-members-pagi span.current,
+.um .um-members-pagi span.current:hover,
+.um .um-profile-nav-item.active a,
+.um .um-profile-nav-item.active a:hover,
+.upload,
+.um-modal-header,
+.um-modal-btn,
+.um-modal-btn.disabled,
+.um-modal-btn.disabled:hover,
+div.uimob800 .um-account-side li a.current,
+div.uimob800 .um-account-side li a.current:hover,
+.um .um-button,
+.um a.um-button,
+.um a.um-button.um-disabled:hover,
+.um a.um-button.um-disabled:focus,
+.um a.um-button.um-disabled:active,
+.um input[type=submit].um-button,
+.um input[type=submit].um-button:focus,
+.um input[type=submit]:disabled:hover{
+    background: #3f51b5 !important;
+}
+
+.um .um-field-group-head:hover,
+.picker__footer,
+.picker__header,
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover,
+.picker__day--highlighted:hover,
+.picker--focused .picker__day--highlighted,
+.picker__list-item:hover,
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted,
+.picker__list-item--selected,
+.picker__list-item--selected:hover,
+.picker--focused .picker__list-item--selected,
+.um .um-button:hover,
+.um a.um-button:hover,
+.um input[type=submit].um-button:hover{
+    background: #7284E8 !important;
+}
+
+.um input[type=submit].um-button{
+	background: #3f51b5 !important;
+}
+
+.um-account-side li a.current span.um-account-icon{
+	color:  #3f51b5 !important;
+}
+
+/* Button alt colors */
+.um .um-button.um-alt, 
+.um input[type=submit].um-button.um-alt {
+    background: #eeeeee !important;
+}
+
+.um .um-button.um-alt:hover,
+.um input[type=submit].um-button.um-alt:hover {
+    background: #e5e5e5 !important;	
+}
+
+/* Paid Memberships Pro */
+#pmpro_account-profile{
+    display: none;
+}
+
+.um-account-profile-link{
+    display: none;
 }

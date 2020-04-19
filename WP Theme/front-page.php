@@ -17,7 +17,7 @@
                     <p class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
                     </p>
-                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-indigo btn-lg mt-4">Get Started for Free</a>
+                    <a target="_self" href="<? echo site_url('register'); ?>" class="btn btn-indigo btn-lg mt-4">Get Started Now</a>
                 </div>
                 <!--Grid column-->
 
@@ -193,7 +193,7 @@
                 <div class="jumbotron mb-0 text-center indigo white-text rounded">
 
                     <!-- Title -->
-                    <h2 class="card-title mb-5 h2">It's time to get started!</h2>
+                    <h2 class="card-title mb-5 h2">What it's all about!</h2>
 
                     <!-- Row -->
                     <div class="row">
@@ -228,7 +228,7 @@
                     <hr class="my-4 rgba-white-light">
 
                     <div class="pt-2">
-                    <button type="button" class="btn btn-outline-white">Sign up now</button>
+                        <a target="_self" href="<? echo site_url('program'); ?>" class="btn btn-outline-white">Learn More</a>
                     </div>
 
                 </div>

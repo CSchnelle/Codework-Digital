@@ -11,16 +11,16 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 	<!-- Footer Menu -->
 	<nav class="navbar navbar-expand-lg">
     <div class="container py-4">
-			<ul class="navbar-nav ml-auto mr-auto pl-2">
+			<ul class="navbar-nav ml-auto mr-auto">
 				<?php
 				$args = array(
-					'theme_location' => 'header-menu',
+					'theme_location' => 'footer-menu',
 					'depth' => 2,
 					'container' => false,
 					'menu_class' => 'navbar-nav mr-auto',
 					'walker' => new Bootstrap_Walker_Nav_Menu()
 				);
-				if (has_nav_menu('header-menu')) {
+				if (has_nav_menu('footer-menu')) {
 					wp_nav_menu($args);
 				}
 				?>
@@ -31,7 +31,7 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
     <!--Copyright-->
     <div class="footer-copyright py-3">
         © 2020 Copyright:
-        <a href="" target="_self"> TheTalkMadeSimple.com </a>
+        <a href="<?php echo site_url(''); ?>" target="_self"> TheTalkMadeSimple.com </a>
     </div>
     <!--/.Copyright-->
 </html>

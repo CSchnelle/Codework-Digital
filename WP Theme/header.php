@@ -56,7 +56,7 @@
                     <ul class="navbar-nav nav-flex-icons">
 						
 						<li class="nav-item">
-                            <a href="login/" class="nav-link waves-effect" target="_self">
+                            <a href="<?php echo site_url('/login'); ?>" class="nav-link waves-effect" target="_self">
                                 <button type="button" class="btn btn-indigo waves-effect waves-light my-1 mx-0 px-3 py-2">Login</button>
                             </a>
                         </li>
