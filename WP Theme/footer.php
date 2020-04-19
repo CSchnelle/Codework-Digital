@@ -8,37 +8,30 @@ $("#mdb-navigation > ul > li > a").addClass("page-link")
 <!--Footer-->
 <footer class="page-footer elegant-color text-center font-small wow fadeIn">
 
-    <!--Call to action-->
-    <div class="pt-4">
-        <a class="btn btn-outline-white" href="http://thetalkmadesimple.com/terms-conditions/" target="_blank" role="button">Terms & Conditions
-            </i>
-        </a>
-        
+	<!-- Footer Menu -->
+	<nav class="navbar navbar-expand-lg">
+    <div class="container py-4">
+			<ul class="navbar-nav ml-auto mr-auto pl-2">
+				<?php
+				$args = array(
+					'theme_location' => 'header-menu',
+					'depth' => 2,
+					'container' => false,
+					'menu_class' => 'navbar-nav mr-auto',
+					'walker' => new Bootstrap_Walker_Nav_Menu()
+				);
+				if (has_nav_menu('header-menu')) {
+					wp_nav_menu($args);
+				}
+				?>
+			</ul>
     </div>
-    <!--/.Call to action-->
-
-    <hr class="my-4">
-
-    <!-- Social icons -->
-    <div class="pb-4">
-        <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-            <i class="fab fa-facebook-f mr-3"></i>
-        </a>
-
-        <a href="https://twitter.com/MDBootstrap" target="_blank">
-            <i class="fab fa-twitter mr-3"></i>
-        </a>
-
-        <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-            <i class="fa fa-youtube mr-3"></i>
-        </a>
-
-    </div>
+	</nav>
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
         © 2020 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> TheTalkMadeSimple.com </a>
+        <a href="" target="_self"> TheTalkMadeSimple.com </a>
     </div>
     <!--/.Copyright-->
 </html>

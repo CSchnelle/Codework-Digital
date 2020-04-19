@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <!-- Right -->
-                    <ul class="navbar-nav ml-auto font-weight-bolder">
+                    <ul class="navbar-nav pl-2 ml-auto font-weight-bolder">
                         <?php
                         $args = array(
                             'theme_location' => 'header-menu',
@@ -54,14 +54,10 @@
                     </ul>
 
                     <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item">
-                            <a href="https://www.facebook.com/" class="nav-link waves-effect" target="_blank">
-                                <i class="fab fa-facebook-f fa-lg"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://twitter.com/" class="nav-link waves-effect" target="_blank">
-                                <i class="fab fa-twitter fa-lg"></i>
+						
+						<li class="nav-item">
+                            <a href="login/" class="nav-link waves-effect" target="_self">
+                                <button type="button" class="btn btn-indigo waves-effect waves-light my-1 mx-0 px-3 py-2">Login</button>
                             </a>
                         </li>
                     </ul>
@@ -73,5 +69,3 @@
         <!-- Navbar -->
     </header>
     <!--Main Navigation-->
-
-
