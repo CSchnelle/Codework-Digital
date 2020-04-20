@@ -177,3 +177,11 @@ div.uimob800 .um-account-side li a.current:hover,
 .um-account-profile-link{
     display: none;
 }
+
+.pmpro_confirmation_wrap a{
+	display: none;
+}
+
+.um-account-meta{
+	display: none;
+}
