@@ -17,7 +17,7 @@
                     <p class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
                     </p>
-                    <a target="_self" href="<? echo site_url('register'); ?>" class="btn btn-indigo btn-lg mt-4">Get Started Now</a>
+                    <a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-indigo btn-lg mt-4">Get Started Now</a>
                 </div>
                 <!--Grid column-->
 
