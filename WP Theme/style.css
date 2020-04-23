@@ -1,5 +1,5 @@
 /*
-Theme Name: Made Simple
+Theme Name: Simple
 Theme URI: See Codework Digital
 Description: This is outstanding WP theme developed on Material Design for Bootstrap 4 by the Codework Digital team
 Version: 1.0.0
@@ -33,6 +33,10 @@ Author: Codework Digital
 
 .card-avatar img {
     width: 100px; 
+}
+
+.card-post-height {
+	min-height: 125px;
 }
 
 body {
@@ -183,5 +187,9 @@ div.uimob800 .um-account-side li a.current:hover,
 }
 
 .um-account-meta{
+	display: none;
+}
+
+.pmpro_checkout-h3-msg{
 	display: none;
 }

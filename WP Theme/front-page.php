@@ -1,4 +1,4 @@
-<?php  get_header();?>
+<?php  get_header(); ?>
 
 <!-- Full Page Intro Chanse S 3/25 -->
 <div class="view full-page-intro front-page-img background-tint">
@@ -14,10 +14,10 @@
                 <div class="col-md-12 mb-4 white-text text-center">
                     <h1 class="display-3 font-weight-bold">The Talk Shouldn't be Scary</h1>
                     <hr class="hr-light">
-                    <p class="mb-4 d-none d-md-block">
+                    <div class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
-                    </p>
-                    <a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-indigo btn-lg mt-4">Get Started Now</a>
+                    </div>
+                    <a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-indigo btn-lg mt-4">Sign Up Now</a>
                 </div>
                 <!--Grid column-->
 
@@ -34,154 +34,63 @@
 <!--Main layout-->
     <main>
         <section>
-            <div class="container text-center pb-4 px-0">
+            <div class="wide-container text-center px-0">
+
                 <h1 class="font-weight-bold">Let Us Help You</h1>
 
                 <div class="container-fluid">
-                    <h2 class="text-center mb-3">Check out our latest courses.</h2>
+                    <h2 class="text-center mb-3">Take a peek at what we have to offer.</h2>
+												<!--Grid row-->
+						<div class="row wow fadeIn">
+						<?php
+						if ( have_posts() ) {
+						$counter = 1;
+						while ( have_posts() ) {
+						the_post();
+						?>
 
-                    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "freeScroll": true, "contain": true }'>
-                        <div class="cell">
-                         <!--Card-->
-                            <div class="card mdb-color lighten-2">
+							<!--Grid column-->
+							<div class="col-xl-3 pb-5">
+								<div class="card mdb-color lighten-2">
 
-                            <!--Card image-->
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg" class="card-img-top" alt="photo">
-                                <a href="#">
-                                <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
+									<!--Featured image-->
+									<div class="view overlay rounded">
+										<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'img-fluid')); ?>
+										<a href="<?php echo get_permalink() ?>">
+											<div class="mask"></div>
+										</a>
+									</div>
 
-                            <!--Card content-->
-                            <div class="card-body text-center">
-                                <!--Title-->
-                                <h4 class="card-title white-text">Course 1</h4>
-                                <!--Text-->
-                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                            </div>
+									<!--Excerpt-->
+									<div class="card-body text-center white-text">
+										
+										<h4 class="mb-3 font-weight-bold">
+											<strong><?php the_title(); ?></strong>
+										</h4>
+										<p><?php the_excerpt(); ?></p>
+										<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md waves-effect">Read More</a>
+										
+									</div>
+								</div>
+							</div>
+							<!--Grid column-->
 
-                            </div>
-                            <!--/.Card-->
-                        
-                        </div>
-
-                        <div class="cell">
-                         <!--Card-->
-                            <div class="card mdb-color lighten-2">
-
-                            <!--Card image-->
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(122).jpg" class="card-img-top" alt="photo">
-                                <a href="#">
-                                <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-
-                            <!--Card content-->
-                            <div class="card-body text-center">
-                                <!--Title-->
-                                <h4 class="card-title white-text">Course 2</h4>
-                                <!--Text-->
-                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                            </div>
-
-                            </div>
-                            <!--/.Card-->
-                        
-                        </div>
-
-                        <div class="cell">
-                         <!--Card-->
-                            <div class="card mdb-color lighten-2">
-
-                            <!--Card image-->
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(123).jpg" class="card-img-top" alt="photo">
-                                <a href="#">
-                                <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-
-                            <!--Card content-->
-                            <div class="card-body text-center">
-                                <!--Title-->
-                                <h4 class="card-title white-text">Course 3</h4>
-                                <!--Text-->
-                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                            </div>
-
-                            </div>
-                            <!--/.Card-->
-                        
-                        </div>
-
-                        <div class="cell">
-                         <!--Card-->
-                            <div class="card mdb-color lighten-2">
-
-                            <!--Card image-->
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg" class="card-img-top" alt="photo">
-                                <a href="#">
-                                <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-
-                            <!--Card content-->
-                            <div class="card-body text-center">
-                                <!--Title-->
-                                <h4 class="card-title white-text">Course 4</h4>
-                                <!--Text-->
-                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                            </div>
-
-                            </div>
-                            <!--/.Card-->
-                        
-                        </div>
-
-                        <div class="cell">
-                         <!--Card-->
-                            <div class="card mdb-color lighten-2">
-
-                            <!--Card image-->
-                            <div class="view">
-                                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="card-img-top" alt="photo">
-                                <a href="#">
-                                <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
-
-                            <!--Card content-->
-                            <div class="card-body text-center">
-                                <!--Title-->
-                                <h4 class="card-title white-text">Course 5</h4>
-                                <!--Text-->
-                                <p class="card-text white-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-                                <a href="#" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-                            </div>
-
-                            </div>
-                            <!--/.Card-->
-                        
-                        </div>
-
-                    </div>
+						  <?php
+						  if ($counter % 4 == 0) {
+						  ?>
+						  </div>
+						  <!--Grid row-->
+						  <!--Grid dynamic row-->
+						  <div class="row wow fadeIn">
+						  <?php
+						  }
+						  $counter++;
+						  } // end while
+						  } // end if
+						  ?>
+						  </div>
+						  <!--Grid row-->
+                    
                 </div>
             </div>
         </section>
@@ -228,7 +137,7 @@
                     <hr class="my-4 rgba-white-light">
 
                     <div class="pt-2">
-                        <a target="_self" href="<? echo site_url('program'); ?>" class="btn btn-outline-white">Learn More</a>
+                        <a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-outline-white">Learn More</a>
                     </div>
 
                 </div>
@@ -275,4 +184,4 @@
     </main>
     <!--Main layout-->
 
-<?php  get_footer(); ?>
+<?php get_footer(); ?>
