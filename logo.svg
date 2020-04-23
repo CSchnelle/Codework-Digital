@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="793.70081"
-   height="1122.5197"
-   viewBox="0 0 210 297"
+   width="1122.5197"
+   height="793.70081"
+   viewBox="0 0 296.99998 210.00001"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="D:\GitHub\chansestephens.github.io\logo.png"
-   inkscape:export-xdpi="104.70954"
-   inkscape:export-ydpi="104.70954">
+   inkscape:export-filename="D:\GitHub\Codework-Digital\logo.png"
+   inkscape:export-xdpi="12.055977"
+   inkscape:export-ydpi="12.055977">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-604.77027"
-     inkscape:cy="1207.2697"
+     inkscape:cx="-129.14328"
+     inkscape:cy="824.8024"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,39 +50,37 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-86.999987)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="-172.42374"
        y="73.994034"
-       id="text4520"><tspan
+       id="text4520"
+       inkscape:export-xdpi="12.055977"
+       inkscape:export-ydpi="12.055977"><tspan
          sodipodi:role="line"
          x="-172.42374"
          y="73.994034"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';word-spacing:-6.61458349px;stroke-width:0.26458332;fill:#1a1a1a;"
-         id="tspan4522">the talk made simple.</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';word-spacing:-6.61458349px;fill:#1a1a1a;stroke-width:0.26458332"
+         id="tspan4522">THE talk made simple.</tspan></text>
     <rect
        style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:#0034ff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4546"
-       width="165.09042"
+       width="96.796455"
        height="4.565835"
-       x="-170.13774"
+       x="-169.83293"
        y="79.043182"
-       ry="0" />
-    <rect
-       style="opacity:1;fill:#ff0000;fill-opacity:0;stroke:#0034ff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect824"
-       width="165.55357"
-       height="78.619049"
-       x="-606.2738"
-       y="-232.92262" />
+       ry="0"
+       inkscape:export-xdpi="12.055977"
+       inkscape:export-ydpi="12.055977" />
   </g>
 </svg>
