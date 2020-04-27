@@ -9,25 +9,27 @@ the_post();
 
 <!--Main layout-->
 <main>
+	<!-- Featured image -->
+	<?php the_post_thumbnail( 'large', array( 'class'=> 'img-fluid z-depth-1-half mb-4')); ?>
     <div class="container min-vh-100">
 
         <!--Section: Post-->
-        <section class="mt-3">
-
+        <section>
+			
             <!--Grid row-->
             <div class="row wow fadeIn">
 
                 <!--Grid column-->
-                <div class="col-md-12 mb-4">
-
-                    <!-- Featured image -->
-                    <?php the_post_thumbnail( 'large', array( 'class'=> 'img-fluid z-depth-1-half mb-4')); ?>
+                <div class="col-md-12">
 
                     <!--Card-->
-                    <div class="card mb-4">
+                    <div class="card">
 
                         <!--Card content-->
                         <div class="card-body">
+                                <h2 class="display-5 font-weight-light mb-4">
+									<?php the_title(); ?>
+								</h2>
                             <div class="post-content">
                                 <?php the_content(); ?>
                             </div>
