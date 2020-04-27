@@ -16,9 +16,9 @@
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="favicon.svg"
-   inkscape:export-filename="D:\GitHub\chansestephens.github.io\logo.png"
-   inkscape:export-xdpi="104.70954"
-   inkscape:export-ydpi="104.70954">
+   inkscape:export-filename="D:\GitHub\Codework-Digital\favicon.png"
+   inkscape:export-xdpi="102.40002"
+   inkscape:export-ydpi="102.40002">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="-1285.0209"
-     inkscape:cy="956.87502"
+     inkscape:cx="-932.83243"
+     inkscape:cy="875.17466"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,29 +58,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
+    <path
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#0034ff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m -250.08602,1.946649 a 63.499999,63.997901 0 0 0 -63.49999,63.997902 63.499999,63.997901 0 0 0 51.29763,62.784919 V 52.197604 h -27.61589 V 29.543139 h 79.63649 v 22.654465 h -28.73985 v 76.749046 a 63.499999,63.997901 0 0 0 52.42161,-63.002099 63.499999,63.997901 0 0 0 -63.5,-63.997902 z"
        id="path890"
-       cx="-250.08624"
-       cy="66.434517"
-       r="63.5" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.44942856px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-297.12952"
-       y="157.48247"
-       id="text4520"><tspan
-         sodipodi:role="line"
-         x="-297.12952"
-         y="157.48247"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:160.55726624px;line-height:1;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans Bold';word-spacing:-20.90589333px;fill:#ffffff;stroke-width:0.26458332"
-         id="tspan4522">T</tspan></text>
-    <rect
-       style="opacity:1;fill:#ff0000;fill-opacity:0;stroke:#0034ff;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect824"
-       width="165.55357"
-       height="78.619049"
-       x="-606.2738"
-       y="-232.92262" />
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

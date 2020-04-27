@@ -1,6 +1,5 @@
 <?php  get_header(); ?>
 
-<!-- Full Page Intro Chanse S 3/25 -->
 <div class="view full-page-intro front-page-img background-tint">
 
     <!-- Mask & flexbox options-->
@@ -40,18 +39,22 @@
 
                 <div class="container-fluid">
                     <h2 class="text-center mb-3">Take a peek at what we have to offer.</h2>
-												<!--Grid row-->
+						<!--Grid row-->
 						<div class="row wow fadeIn">
-						<?php
-						if ( have_posts() ) {
-						$counter = 1;
-						while ( have_posts() ) {
-						the_post();
-						?>
+							<?php
+								$catquery = new WP_Query(  array( 'category_name' => 'featured' ) ); 
+							?>
+							
+							<?php
+								if ( $catquery->have_posts() ) {
+								$counter = 1;
+								while ( $catquery->have_posts() ) {
+								$catquery->the_post();
+							?>
 
 							<!--Grid column-->
-							<div class="col-xl-3 pb-5">
-								<div class="card mdb-color lighten-2">
+							<div class="col-xl-3 pb-2 d-flex">
+								<div id="featured-section" class="card mdb-color lighten-2">
 
 									<!--Featured image-->
 									<div class="view overlay rounded">
@@ -62,14 +65,13 @@
 									</div>
 
 									<!--Excerpt-->
-									<div class="card-body text-center white-text">
+									<div class="card-body text-center white-text d-flex flex-column">
 										
 										<h4 class="mb-3 font-weight-bold">
 											<strong><?php the_title(); ?></strong>
 										</h4>
-										<p><?php the_excerpt(); ?></p>
-										<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md waves-effect">Read More</a>
-										
+											<p><?php the_excerpt(); ?></p>
+											<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md mt-auto waves-effect">Read More</a>
 									</div>
 								</div>
 							</div>
@@ -151,7 +153,7 @@
                 <div class="row rounded z-depth-1">
 
                     <div class="col-md-4 p-0">
-                        <img src="<?php echo get_bloginfo('template_url') ?>/assets/img/about-me.jpg" class="img-fluid z-depth-1 rounded" alt="Profile Picture">
+                    	<img src="<?php echo get_bloginfo('template_url') ?>/assets/img/about-me.jpg" class="img-fluid z-depth-1 rounded" alt="Profile Picture">
                     </div>
 
                     <div class="col-md-8 py-5">
@@ -184,4 +186,4 @@
     </main>
     <!--Main layout-->
 
-<?php get_footer(); ?>
+<?php  get_footer(); ?>

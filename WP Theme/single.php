@@ -6,51 +6,47 @@ the_post();
 
 <!--Main layout-->
 <main>
-    <div class="container">
-
-        <!--Section: Post-->
-        <section class="mt-3">
-
-            <!--Grid row-->
+	
+	<!-- Featured image -->
+	<div>
+			<?php the_post_thumbnail( 'full', array( 'class'=> 'img-fluid z-depth-1 full-width-img')); ?>
+	</div>
+	
+	     <!--Section: Post-->
+        <section class="my-0 py-0">
+			<!--Grid row-->
             <div class="row wow fadeIn">
-
+			
                 <!--Grid column-->
-                <div class="col-md-8 mb-4">
+                <div class="col-md pr-0 elegant-color-dark my-0 py-0">
+					
+					 <!-- Sticky content -->
+                    <div class="sticky">
+						<div id="dynamic-content">
+							<!--Section: Dynamic Content Wrapper-->
+							<!--Sidebar-->
+							<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+							<?php dynamic_sidebar( 'sidebar' ); ?>
+							<?php endif; ?>
+							<!--/.Sidebar-->
+						</div>
+                    </div>
+                    <!-- Sticky content -->
+			
+				</div>
+					<!--Grid column-->
 
-                    <!-- Breadcrumbs -->
-                    <?php
-                    $categories = get_the_category();
-                    $first_category_name = $categories[0]->cat_name;
-                    $first_category_id = get_cat_ID( $category[0]->cat_name );
-                    $first_category_link = get_category_link( $category_id );
-                    ?>
-                    <ol class="breadcrumb white z-depth-1">
-                        <li class="breadcrumb-item">
-                            <a href="<?php echo get_home_url(); ?>">Home Page</a>
-                        </li>
-                        <?php
-                        if (count($categories)){
-                        ?>
-                        <li class="breadcrumb-item">
-                            <a href="<?php echo $first_category_link ?>"><?php echo $first_category_name ?></a>
-                        </li>
-                        <?php
-                        }
-                        ?>
-                        <li class="breadcrumb-item active"><?php the_title() ?></li>
-                    </ol>
-                    <!-- Breadcrumbs -->
+					<div class="col-md-7 post-sidebar">
+						
+						<!--Card-->
+						<div class="card mb-4">
 
-                    <!-- Featured image -->
-                    <?php the_post_thumbnail( 'large', array( 'class'=> 'img-fluid z-depth-1-half mb-4')); ?>
-
-                    <!--Card-->
-                    <div class="card mb-4">
-
-                        <!--Card content-->
-                        <div class="card-body">
-
-                            <p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> on <?php echo get_the_date(); ?></p>
+							<!--Card content-->
+							<div class="card-body">
+                                <h2 class="display-5 font-weight-light">
+									<?php the_title(); ?>
+								</h2>
+                                <p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> on <?php echo get_the_date(); ?></p>
 
                             <hr>
 
@@ -67,7 +63,7 @@ the_post();
 
                         <!-- Card header -->
                         <div class="card-header font-weight-bold">
-                            <span>Abut the author</span>
+                            <span>About the author</span>
                             <span class="pull-right">
                                 <a href="" class="mr-3">
                                     <i class="fa fa-envelope mr-1"></i>
@@ -106,42 +102,19 @@ the_post();
                     </div>
                     <!--/.Card-->
 
-
-                    <!--Comments and reply-->
-                    <?php comments_template(); ?>
-                    <!--/.Comments and reply-->
                 </div>
-
-                <!--Grid column-->
-                <div class="col-md-4 mb-4">
-
-                    <!-- Sticky content -->
-                    <div class="sticky">
-                        <!--Section: Dynamic Content Wrapper-->
-                        <section>
-                          <div id="dynamic-content"></div>
-
-                        </section>
-                        <!--Section: Dynamic Content Wrapper-->
-
-                        <!--Sidebar-->
-                        <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-                        <?php dynamic_sidebar( 'sidebar' ); ?>
-                        <?php endif; ?>
-                        <!--/.Sidebar-->
-                    </div>
-                    <!-- Sticky content -->
-
-                </div>
-                <!--Grid column-->
-
-            </div>
+                <!--Grid column-->		
+				
+				<!--Grid column-->
+                <div class="col-md pr-0 my-0 py-0">
+					
+				</div>
+				<!--Grid column-->
+				
+				</div>
             <!--Grid row-->
-
-        </section>
-        <!--Section: Post-->
-
-    </div>
+	</section>
+	<!--Section: Post-->
 </main>
 <!--Main layout-->
 

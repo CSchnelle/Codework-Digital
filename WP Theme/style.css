@@ -16,6 +16,10 @@ Author: Codework Digital
     width: 4rem; 
 }
 
+.min-vh-80 {
+	min-height: 80vh !important;
+}
+
 .card-intro {
     margin-top: 67px; }
     .card-intro .card-body {
@@ -35,8 +39,30 @@ Author: Codework Digital
     width: 100px; 
 }
 
-.card-post-height {
-	min-height: 125px;
+.card.card-footer{
+	align-self: flex-end;
+	flex: 1 1 auto;
+}
+
+.wide-container {
+	width: 100%;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.post-sidebar {
+	padding-top: 75px !important;
+	padding-bottom 75px !important;
+}
+
+@media (max-width: 768px)
+{
+	.post-sidebar {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
 }
 
 body {
@@ -58,12 +84,25 @@ body {
 
 .front-page-hero {
     padding-top: 225px;
+}
 
+.full-width-img {
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+	object-fit: cover;
+    height: 500px;
 }
 
 section {
     padding-top: 75px;
     padding-bottom: 75px;
+}
+
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 /*
@@ -77,14 +116,6 @@ section {
     margin: 0 15px;
     overflow: hidden;
 }
-
-/*
-.cell img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-*/
 
 .flickity-page-dots .dot{
     background-color: #7283a7;
@@ -175,21 +206,49 @@ div.uimob800 .um-account-side li a.current:hover,
 
 /* Paid Memberships Pro */
 #pmpro_account-profile{
-    display: none;
+    display: none !important;
 }
 
 .um-account-profile-link{
-    display: none;
+    display: none !important;
 }
 
 .pmpro_confirmation_wrap a{
-	display: none;
+	display: none !important;
 }
 
 .um-account-meta{
-	display: none;
+	display: none !important;
 }
 
 .pmpro_checkout-h3-msg{
-	display: none;
+	display: none !important;
+}
+
+#featured-section .pmpro_content_message{
+	display: none !important;
+}
+
+/* Table of Contents */
+#ezw_tco-2 .ez-toc-widget-container {
+	padding: 40px 20px 40px 20px;
+
+}
+
+div .ez-toc-widget-container ul.ez-toc-list {
+    padding: 10px;
+}
+
+.ez-toc-title-container {
+    font-size: 2em;
+	font-weight: 300;
+    line-height: 1.2;
+	color: #ffffff;
+	text-transform: uppercase;
+	border-bottom: 1px solid #2e2e2e;
+}
+
+.ez-toc-title {
+	text-align: center;
+	font-weight: 300;
 }
