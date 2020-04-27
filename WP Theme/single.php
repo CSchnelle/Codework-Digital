@@ -14,11 +14,14 @@ the_post();
 	
 	     <!--Section: Post-->
         <section class="my-0 py-0">
+			<div class="container-fluid">
+				
+			
 			<!--Grid row-->
             <div class="row wow fadeIn">
 			
                 <!--Grid column-->
-                <div class="col-md pr-0 elegant-color-dark my-0 py-0">
+                <div class="col-md px-0 elegant-color-dark z-depth-1 my-0 py-0">
 					
 					 <!-- Sticky content -->
                     <div class="sticky">
@@ -39,80 +42,97 @@ the_post();
 					<div class="col-md-7 post-sidebar">
 						
 						<!--Card-->
-						<div class="card mb-4">
-
+						<div class="pl-4 pr-4 mb-4">
 							<!--Card content-->
-							<div class="card-body">
+							<div>
+								
                                 <h2 class="display-5 font-weight-light">
 									<?php the_title(); ?>
 								</h2>
-                                <p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a> on <?php echo get_the_date(); ?></p>
+                                <p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></p>
 
                             <hr>
 
                             <div class="post-content">
-                            <?php the_content(); ?>
+                            	<?php the_content(); ?>
                             </div>
 
                         </div>
                     </div>
                     <!--/.Card-->
 
-                    <!--Card-->
-                    <div class="card card-avatar mb-4 wow fadeIn">
+					<div class="mt-5 pt-4 pl-4 pr-4">
+						<h2>
+							Related Lessons
+						</h2>					
+						<hr>
 
-                        <!-- Card header -->
-                        <div class="card-header font-weight-bold">
-                            <span>About the author</span>
-                            <span class="pull-right">
-                                <a href="" class="mr-3">
-                                    <i class="fa fa-envelope mr-1"></i>
-                                    Send message
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-facebook-f mr-2"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-twitter mr-2"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa fa-instagram mr-2"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin-in mr-2"></i>
-                                </a>
-                            </span>
-                        </div>
+						<!-- Card -->
+								<div class="row wow fadeIn">		
 
-                        <!--Card content-->
-                        <div class="card-body">
+									<?php $orig_post = $post;
+									global $post;
+									$tags = wp_get_post_tags($post->ID);
 
-                            <div class="media">
-                                <img class="d-flex mr-3 z-depth-1" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="Generic placeholder image">
-                                <div class="media-body">
-                                    <h5 class="mt-0 font-weight-bold">Miley Steward</h5>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                                    vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                    Donec lacinia congue felis in faucibus.
-                                </div>
-                            </div>
+									if ($tags) {
+										$tag_ids = array();
+										foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+										$args=array(
+											'tag__in' => $tag_ids,
+											'post__not_in' => array($post->ID),
+											'posts_per_page'=>3, // Number of related posts that will be shown.
+											'ignore_sticky_posts'=>1
+											);
 
-                        </div>
+										$my_query = new wp_query( $args );
+										if( $my_query->have_posts() ) {
 
-                    </div>
-                    <!--/.Card-->
+											while( $my_query->have_posts() ) {
+												$my_query->the_post(); ?>
 
-                </div>
-                <!--Grid column-->		
+												<div class="col-xl-4 d-flex pb-2">
+												<div class="card mdb-color lighten-2">
+													<div class="view overlay rounded">
+														<?php the_post_thumbnail( 'medium-large', array ( 'class' => 'img-fluid' )); ?>
+														<a href="<?php echo get_permalink() ?>">
+															<div class="mask"></div>
+														</a>
+													</div>
+
+													<div class="card-body text-center d-flex flex-column white-text">
+														<h4 class="mb-3 font-weight-bold">
+															<strong><?php the_title(); ?></strong>
+														</h4>
+														<p>
+															<?php the_excerpt(); ?>
+															<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md mt-auto waves-effect">Read More</a>
+														</p>
+													</div>
+
+												</div>
+											</div>
+											<? }
+										}
+									}
+									$post = $orig_post;
+									wp_reset_query(); ?>
+
+						<!--/ Card -->
+
+						</div>
+						<!--Grid column-->
+					</div>
+				</div>
 				
 				<!--Grid column-->
-                <div class="col-md pr-0 my-0 py-0">
-					
+                <div class="col-md m-0 p-0">
+
 				</div>
 				<!--Grid column-->
 				
 				</div>
             <!--Grid row-->
+				</div>
 	</section>
 	<!--Section: Post-->
 </main>

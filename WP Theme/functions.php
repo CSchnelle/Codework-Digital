@@ -38,6 +38,10 @@ function mdbtheme_setup() {
     }
 add_action('after_setup_theme', 'mdbtheme_setup');
 
+add_filter( 'excerpt_length', function($length) {
+    return 30;
+} );
+
 /**
  * Include external files
  */
