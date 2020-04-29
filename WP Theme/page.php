@@ -27,7 +27,7 @@ the_post();
 
                         <!--Card content-->
                         <div class="card-body">
-                                <h2 class="display-5 font-weight-light mb-4">
+                                <h2 class="display-5 font-weight-light mb-4 text-center text-uppercase">
 									<?php the_title(); ?>
 								</h2>
                             <div class="post-content">

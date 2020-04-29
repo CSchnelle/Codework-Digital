@@ -80,6 +80,7 @@ the_post();
 										$args=array(
 											'tag__in' => $tag_ids,
 											'post__not_in' => array($post->ID),
+											'orderby' => 'rand',
 											'posts_per_page'=>3, // Number of related posts that will be shown.
 											'ignore_sticky_posts'=>1
 											);
@@ -118,10 +119,11 @@ the_post();
 									wp_reset_query(); ?>
 
 						<!--/ Card -->
-
 						</div>
+						
 						<!--Grid column-->
 					</div>
+						
 				</div>
 				
 				<!--Grid column-->

@@ -67,10 +67,10 @@
 									<!--Excerpt-->
 									<div class="card-body text-center white-text d-flex flex-column">
 										
-										<h4 class="mb-3 font-weight-bold">
+										<h4 class="mb-3 font-weight-bold text-center">
 											<strong><?php the_title(); ?></strong>
 										</h4>
-											<p><?php the_excerpt(); ?></p>
+											<?php  echo '<p class="text-left">' . get_the_excerpt() . '</p>' ?>
 											<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md mt-auto waves-effect">Read More</a>
 									</div>
 								</div>
