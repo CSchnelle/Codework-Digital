@@ -1,25 +1,36 @@
 <?php  get_header();?>
 
-    <div class="view full-page-intro get-started-img background-tint">
-
+    <div class="view full-page-intro get-started-img z-depth-1">
         <!-- Mask & flexbox options-->
-        <div class="d-flex justify-content-center align-items-center">
-
+        <div class="align-items-center">
             <!-- Content -->
             <div class="container front-page-hero">
                 <!--Grid row-->
                 <div class="row wow fadeIn">
                     <!--Grid column-->
                     <div class="col-md-12 mb-4 white-text text-center">
-                        <h1 class="display-3 font-weight-bold">The Talk Shouldn't be Scary</h1>
-                        <hr class="hr-light">
-                        <div class="mb-4 d-none d-md-block">
-                            <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
-                        </div>
-                        <a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-indigo btn-lg mt-4">Learn More</a>
+                        <h2 class="display-4 font-weight-normal">See what The Talk Made Simple can do for you and your FAMILY</h2>
                     </div>
+				</div>
+				<!--Grid row-->
+				
+				<!--Grid row-->
+				<div class="row wow fadeIn justify-content-md-center">
                     <!--Grid column-->
-
+					<div class="col-md-8">
+						<div class="mx-5">
+							<div class="card card-body mt-2 text-left p-5 grey lighten-2">
+								<h2 class="font-weight-normal">We help families talk about difficult topics in fun and easy ways</h2>
+								<p>
+									If you've ever struggled to find the right words when discussing the importance of THE talk with your family then you've come to the right place.
+								</p>
+								<div class="text-center">
+									<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-indigo btn-lg mt-4">Sign Up Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Grid column-->
                 </div>
                 <!--Grid row-->
             </div>
@@ -30,43 +41,44 @@
 
     <main>
 
-        <!-- Sign-up Section -->
-
-        <!-- Row -->
-
-        <hr class="my-4 rgba-white-light">
-
-        <div class="pt-2">
-            <a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-outline-white">Sign Up Now</a>
-        </div>
-
-        <!-- End of Sign-Up Section -->
-
         <!-- Site Trailer -->
 
-        <section class="my-5">
+        <section>
             <div class="container">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/137857207" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item rounded" src="https://player.vimeo.com/video/137857207" allowfullscreen></iframe>
                 </div>
-                <div class="row">
-                    <div class="col-md-8 mx-auto">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliqu</p>
+				
+                <div class="row wow fadeIn">
+                    <div class="mt-5 col-md-4">
+						<h2 class="font-weight-normal text-center">Fun, interesting fact #1</h2>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliqu</p>
+                    </div>
+					
+					 <div class="mt-5 col-md-4">
+						<h2 class="font-weight-normal text-center">Fun, interesting fact #1</h2>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliqu</p>
+                    </div>
+					
+					 <div class="mt-5 col-md-4">
+						<h2 class="font-weight-normal text-center">Fun, interesting fact #2</h2>
+                        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliqu</p>
                     </div>
                 </div>
+				
             </div>
         </section>
 
         <!-- End of Site Trailer -->
 
         <!-- Information Section -->
-        <section>
-
+        <section class="grey lighten-2">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h2>list with checkmarks</h2>
-                        <ul class="list-display list-checkmarks">
+                    <div class="col-md-6 px-5">
+                        <h2 class="text-center">list with checkmarks</h2>
+						<hr>
+                        <ul class="list-display">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliquid repellat earum soluta expedita voluptate sapiente nam vel. </li>
                             <li>Integer molestie lorem at massa</li>
@@ -76,8 +88,10 @@
                             <li>Eget porttitor lorem</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
-                        <h2>list with more white space</h2>
+					
+                    <div class="col-md-6 px-5">
+                        <h2 class="text-center">list with checkmarks</h2>
+						<hr>
                         <ul class="list-display">
                             <li>Lorem ipsum dolor sit amet</li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, ipsa? Asperiores nobis, aliquid repellat earum soluta expedita voluptate sapiente nam vel. </li>
@@ -94,57 +108,120 @@
         <!-- End of Information Section -->
 
         <!-- Sign Up Stepper Section -->
-
         <!-- Horizontal Steppers -->
-        <div class="row">
-            <div class="col-md-12">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
 
-                <!-- Stepers Wrapper -->
-                <ul class="stepper stepper-horizontal">
+						<h2 class="text-center font-weight-normal text-uppercase pb-0 mb-0">Here's the plan!</h2>
+						<!-- Stepers Wrapper -->
+						<ul class="stepper stepper-horizontal mt-0 mb-5 py-0">
 
-                    <!-- First Step -->
-                    <li class="completed">
-                        <a href="#!">
-                            <span class="circle">1</span>
-                            <span class="label">First step</span>
+							<!-- First Step -->
+							<li class="completed">
+								<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>">
+									<span class="circle">1</span>
+									<span class="label">Sign Up!</span>
 
-                        </a>
-                    </li>
+								</a>
+							</li>
 
-                    <!-- Second Step -->
-                    <li class="active">
-                        <a href="#!">
-                            <span class="circle">2</span>
-                            <span class="label">Second step</span>
-                        </a>
-                    </li>
+							<!-- Second Step -->
+							<li class="active">
+								<a target="_self" href="<? echo site_url('lessons'); ?>">
+									<span class="circle">2</span>
+									<span class="label">Check out the lessons</span>
+								</a>
+							</li>
 
-                    <!-- Third Step -->
-                    <li class="warning">
-                        <a href="#!">
-                            <span class="circle"><i class="fas fa-exclamation"></i></span>
-                            <span class="label">Third step</span>
-                        </a>
-                    </li>
+							<!-- Third Step -->
+							<li class="active">
+								<a target="_self" href="<? echo site_url('contact'); ?>">
+									<span class="circle">3</span>
+									<span class="label">Tell us about your success!</span>
+								</a>
+							</li>
 
-                </ul>
-                <!-- /.Stepers Wrapper -->
+						</ul>
+						<!-- /.Stepers Wrapper -->
 
-            </div>
-        </div>
-        <!-- /.Horizontal Steppers -->
+					</div>
+				</div>
+			<!-- /.Horizontal Steppers -->
+			<!--End of Sign Up Section -->
 
-        <!--End of Sign Up Section -->
+				<div class="row wow fadeIn">
+					
+					<div class="col-md-4">	
+						<!-- Card -->
+						<div class="card">
+						  <!-- Card image -->
+						  <div class="text-center mt-4">
+							<img class="avatar" src="<?php echo get_bloginfo('template_url') ?>/assets/img/person1.jpg" class="img-fluid z-depth-1 rounded" alt="Testimonal Avatar">
+						  </div>
+						  <!-- Card content -->
+						  <div class="card-body">
+							<!-- Title -->
+							<h4 class="card-title text-center">Kari Joseph</h4>
+							  <hr>
+							<!-- Text -->
+							<p class="card-text"><i class="fas fa-quote-left pr-2"></i>Vestibulum ut augue turpis. Duis euismod gravida ligula, eget malesuada lectus hendrerit nec. Vivamus metus felis, cursus id suscipit non, pulvinar rutrum ex. Nulla quis dignissim dui, vitae volutpat enim.</p>
+						  </div>
+						</div>
+						<!-- Card -->			
+					</div>
+					
+					<div class="col-md-4">	
+						<!-- Card -->
+						<div class="card">
+						  <!-- Card image -->
+						  <div class="text-center mt-4">
+							<img class="avatar" src="<?php echo get_bloginfo('template_url') ?>/assets/img/person2.jpg" class="img-fluid z-depth-1 rounded" alt="Testimonal Avatar">
+						  </div>
+						  <!-- Card content -->
+						  <div class="card-body">
+							<!-- Title -->
+							<h4 class="card-title text-center">Bobby Valentino</h4>
+							  <hr>
+							<!-- Text -->
+							<p class="card-text"><i class="fas fa-quote-left pr-2"></i>Vestibulum ut augue turpis. Duis euismod gravida ligula, eget malesuada lectus hendrerit nec. Vivamus metus felis, cursus id suscipit non, pulvinar rutrum ex. Nulla quis dignissim dui, vitae volutpat enim.</p>
+						  </div>
+						</div>
+						<!-- Card -->			
+					</div>
+					
+					<div class="col-md-4">	
+						<!-- Card -->
+						<div class="card">
+						  <!-- Card image -->
+						  <div class="text-center mt-4">
+							<img class="avatar" src="<?php echo get_bloginfo('template_url') ?>/assets/img/person3.jpg" class="img-fluid z-depth-1 rounded" alt="Testimonal Avatar">
+						  </div>
+						  <!-- Card content -->
+						  <div class="card-body">
+							<!-- Title -->
+							<h4 class="card-title text-center">Justine George</h4>
+							  <hr>
+							<!-- Text -->
+							<p class="card-text"><i class="fas fa-quote-left pr-2"></i>Vestibulum ut augue turpis. Duis euismod gravida ligula, eget malesuada lectus hendrerit nec. Vivamus metus felis, cursus id suscipit non, pulvinar rutrum ex. Nulla quis dignissim dui, vitae volutpat enim.</p>
+						  </div>
+						</div>
+						<!-- Card -->			
+					</div>
+		
+				</div>
+			</div>
+		</section>
 
         <!-- FAQ Section -->
-        <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+        <section class="accordion-section clearfix grey lighten-2" aria-label="Question Accordions">
             <div class="container">
-
-                <h2>Frequently Asked Questions </h2>
+                <h2 class="text-center">Frequently Asked Questions </h2>
                 <br>
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel-group card card-body" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
-                        <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                        <div class="panel-heading p-3 mb-2" role="tab" id="heading0">
                             <h3 class="panel-title">
 								<a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
 									What are the benefits??
@@ -153,8 +230,8 @@
                         </div>
                         <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                             <div class="panel-body px-3 mb-4">
-                                <p>With THE Talk Made Simple, you will benefit from a finely-tuned video based ciriculum...</p>
-                                <ul>
+                                <p class="font-weight-light">With THE Talk Made Simple, you will benefit from a finely-tuned video based ciriculum...</p>
+                                <ul class="font-weight-light">
                                     <li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
                                     <li>Scalability – pay for what you need today and add-on options as you grow.</li>
                                     <li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
@@ -174,7 +251,7 @@
                         </div>
                         <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                             <div class="panel-body px-3 mb-4">
-                                <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
+                                <p class="font-weight-light">Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
                             </div>
                         </div>
                     </div>
@@ -189,7 +266,7 @@
                         </div>
                         <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                             <div class="panel-body px-3 mb-4">
-                                <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
+                                <p class="font-weight-light">Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
                             </div>
                         </div>
                     </div>
@@ -204,7 +281,7 @@
                         </div>
                         <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
                             <div class="panel-body px-3 mb-4">
-                                <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
+                                <p class="font-weight-light">Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
                             </div>
                         </div>
                     </div>

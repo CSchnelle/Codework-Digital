@@ -1,6 +1,6 @@
 <?php  get_header(); ?>
 
-    <div class="view full-page-intro front-page-img background-tint">
+    <div class="view full-page-intro front-page-img background-tint z-depth-1">
 
         <!-- Mask & flexbox options-->
         <div class="d-flex justify-content-center align-items-center">

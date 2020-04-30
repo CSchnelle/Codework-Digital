@@ -13,6 +13,15 @@
 .card-intro {
 	margin-top: 67px;
 }
+.cirlce {
+	background-color: #3f51b5 !important;
+}
+.avatar {
+	vertical-align: middle;
+  	width: 200px;
+  	height: 200px;
+  	border-radius: 50%;
+}
 .card-intro .card-body {
 	-webkit-border-radius: 0 !important;
 	border-radius: 0 !important;
