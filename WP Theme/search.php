@@ -1,13 +1,18 @@
 <?php  get_header();?>
 
 <!--Main layout-->
-  
-      
-            <div class="container">
-                <header class="header">
-                    <div class="search-header">
-                        <?php get_search_form(); ?>
-                <h1 class="font-weight-bold">Results...</h1>
+<main class="min-vh-80">
+    <section>
+
+        <div class="container">
+            <div class="search-header">
+                <?php get_search_form(); ?>
+                    <h1 class="font-weight-bold">Results...</h1>
             </div>
-    
-    <!--Main layout-->
+        </div>
+        
+    </section>
+</main>
+<!--Main layout-->
+
+<?php  get_footer(); ?>

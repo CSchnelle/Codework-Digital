@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 
-<div id= "primary" class="content-area">
-	<main id="main" class="site-main" role="main"></main>
-</div>
-
 <!--Main layout-->
     <main class="min-vh-80">
-        <div class="container">
-            <h1><?php _e('Page Not Found', 'thetalk'); ?></h1>
+		<section>
+			<div class="container">
+				<h1><?php _e('Page Not Found', 'thetalk'); ?></h1>
 
-            <div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. Maybe try one of the links below or search, or visit our <a href="/index.php"title="home page">home page</a>.', 'thetalk' ); ?></p></div>
+				<div class="intro-text">
+					<p>The page you were looking for could not be found. Use this link to return to our
+						<a target="_self" href="<? echo site_url(); ?>" class="indigo-text">home page</a>
+					</p>
+				</div>
 
-        </div>
+			</div>
+		</section>
     </main>
 <!--Main layout-->
 

@@ -1,253 +1,174 @@
-/*
-Theme Name: Simple
-Theme URI: See Codework Digital
-Description: This is outstanding WP theme developed on Material Design for Bootstrap 4 by the Codework Digital team
-Version: 1.0.0
-Author: Codework Digital
-*/
-  
+/* Theme Name: Simple Theme URI: See Codework Digital Description: This is outstanding WP theme developed on Material Design for Bootstrap 4 by the Codework Digital team Version: 1.0.0 Author: Codework Digital */
 .blue-gradient {
-    background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
-    background: -o-linear-gradient(50deg, #45cafc, #303f9f) !important;
-    background: linear-gradient(40deg, #45cafc, #303f9f) !important; 
+	background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
+	background: -o-linear-gradient(50deg, #45cafc, #303f9f) !important;
+	background: linear-gradient(40deg, #45cafc, #303f9f) !important;
 }
-
 .card-comments img {
-    width: 4rem; 
+	width: 4rem;
 }
-
 .min-vh-80 {
 	min-height: 80vh !important;
 }
-
 .card-intro {
-    margin-top: 67px; }
-    .card-intro .card-body {
-        -webkit-border-radius: 0 !important;
-        border-radius: 0 !important; 
+	margin-top: 67px;
 }
-
+.card-intro .card-body {
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
 .navbar-brand img {
-    height: 20px; 
+	height: 20px;
 }
-
 .pagination .page-item.active .page-link {
-    background-color: #09c; 
+	background-color: #09c;
 }
-
 .card-avatar img {
-    width: 100px; 
+	width: 100px;
 }
-
 .card.card-footer{
 	align-self: flex-end;
 	flex: 1 1 auto;
 }
-
 .hoverable-shade:hover {
 	background-color: rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
-    -webkit-transition: all 0.30s ease-in-out;
-    transition: all 0.30s ease-in-out;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
+	-webkit-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
 }
-
 .hoverable-shade {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: all 0.30s ease-in-out;
-    transition: all 0.30s ease-in-out;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
 }
-
 .text-hover {
 	color: #000;
 }
-
 .text-hover:hover {
 	color: rgba(0, 0, 0, 0.8) !important;
 	background-color: transparent;
 }
-
 .text-small {
 	font-size: .90em;
 }
-
 .wider-container {
 	width: 100%;
-    padding-right: 30px !important;
-    padding-left: 30px !important;
-    margin-right: auto;
-    margin-left: auto;
+	padding-right: 30px !important;
+	padding-left: 30px !important;
+	margin-right: auto;
+	margin-left: auto;
 }
-
 .post-sidebar {
 	padding-top: 75px !important;
 	padding-bottom: 75px !important;
 }
-
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
 	.post-sidebar {
 		padding-top: 25px !important;
-	}
+   }
 }
-
 body {
-    padding-top: 55px;
+	padding-top: 55px;
 }
-
 .background-tint {
-    background-color: rgba(0,0,0,.25);
-    background-blend-mode: multiply;
+	background-color: rgba(0,0,0,.25);
+	background-blend-mode: multiply;
 }
-
 .front-page-img {
-    background-image: url('assets/img/couch.jpg'); 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
-    height: 900px;
+	background-image: url('assets/img/couch.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 900px;
 }
-
+.get-started-img {
+	background-image: url('assets/img/pattern.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 900px;
+}
 .front-page-hero {
-    padding-top: 225px;
+	padding-top: 225px;
 }
-
 .full-width-img {
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	object-fit: cover;
-    height: 500px;
+	height: 500px;
 }
-
 .lessons-img {
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	object-fit: cover;
-    height: auto;
+	height: auto;
 }
-
 section {
-    padding-top: 75px;
-    padding-bottom: 75px;
+	padding-top: 75px;
+	padding-bottom: 75px;
 }
-
 .display-5 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 1.2;
 }
-
-/*
-* Carousel
-*/
-
+/* * Carousel */
 .cell{
-    width: 31%;
-    height: 450px;
-    display: inline-block;
-    margin: 0 15px;
-    overflow: hidden;
+	width: 31%;
+	height: 450px;
+	display: inline-block;
+	margin: 0 15px;
+	overflow: hidden;
 }
-
 .flickity-page-dots .dot{
-    background-color: #7283a7;
+	background-color: #7283a7;
 }
-
 @media only screen and (max-width: 992px){
-    .cell {
-        width: 60%;
-    }
+	.cell {
+		width: 60%;
+   }
 }
-
 @media only screen and (max-width: 768px){
-    .cell {
-        width: 70%;
-  }
+	.cell {
+		width: 70%;
+   }
 }
-
 @media only screen and (max-width: 768px){
-    .cell {
-        width: 80%;
-  }
+	.cell {
+		width: 80%;
+   }
 }
-
 /* User Profile Button colors */
-.um .um-field-group-head,
-.picker__box,
-.picker__nav--prev:hover,
-.picker__nav--next:hover,
-.um .um-members-pagi span.current,
-.um .um-members-pagi span.current:hover,
-.um .um-profile-nav-item.active a,
-.um .um-profile-nav-item.active a:hover,
-.upload,
-.um-modal-header,
-.um-modal-btn,
-.um-modal-btn.disabled,
-.um-modal-btn.disabled:hover,
-div.uimob800 .um-account-side li a.current,
-div.uimob800 .um-account-side li a.current:hover,
-.um .um-button,
-.um a.um-button,
-.um a.um-button.um-disabled:hover,
-.um a.um-button.um-disabled:focus,
-.um a.um-button.um-disabled:active,
-.um input[type=submit].um-button,
-.um input[type=submit].um-button:focus,
-.um input[type=submit]:disabled:hover{
-    background: #3f51b5 !important;
+.um .um-field-group-head, .picker__box, .picker__nav--prev:hover, .picker__nav--next:hover, .um .um-members-pagi span.current, .um .um-members-pagi span.current:hover, .um .um-profile-nav-item.active a, .um .um-profile-nav-item.active a:hover, .upload, .um-modal-header, .um-modal-btn, .um-modal-btn.disabled, .um-modal-btn.disabled:hover, div.uimob800 .um-account-side li a.current, div.uimob800 .um-account-side li a.current:hover, .um .um-button, .um a.um-button, .um a.um-button.um-disabled:hover, .um a.um-button.um-disabled:focus, .um a.um-button.um-disabled:active, .um input[type=submit].um-button, .um input[type=submit].um-button:focus, .um input[type=submit]:disabled:hover{
+	background: #3f51b5 !important;
 }
-
-.um .um-field-group-head:hover,
-.picker__footer,
-.picker__header,
-.picker__day--infocus:hover,
-.picker__day--outfocus:hover,
-.picker__day--highlighted:hover,
-.picker--focused .picker__day--highlighted,
-.picker__list-item:hover,
-.picker__list-item--highlighted:hover,
-.picker--focused .picker__list-item--highlighted,
-.picker__list-item--selected,
-.picker__list-item--selected:hover,
-.picker--focused .picker__list-item--selected,
-.um .um-button:hover,
-.um a.um-button:hover,
-.um input[type=submit].um-button:hover{
-    background: #7284E8 !important;
+.um .um-field-group-head:hover, .picker__footer, .picker__header, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected, .um .um-button:hover, .um a.um-button:hover, .um input[type=submit].um-button:hover{
+	background: #7284E8 !important;
 }
-
 .um input[type=submit].um-button{
 	background: #3f51b5 !important;
 }
-
 .um-account-side li a.current span.um-account-icon{
-	color:  #3f51b5 !important;
+	color: #3f51b5 !important;
 }
-
 /* Button alt colors */
-.um .um-button.um-alt, 
-.um input[type=submit].um-button.um-alt {
-    background: #eeeeee !important;
+.um .um-button.um-alt, .um input[type=submit].um-button.um-alt {
+	background: #eeeeee !important;
 }
-
-.um .um-button.um-alt:hover,
-.um input[type=submit].um-button.um-alt:hover {
-    background: #e5e5e5 !important;	
+.um .um-button.um-alt:hover, .um input[type=submit].um-button.um-alt:hover {
+	background: #e5e5e5 !important;
 }
-
 /* Paid Memberships Pro */
 #pmpro_account-profile{
-    display: none !important;
+	display: none !important;
 }
-
 .card .pmpro_content_message {
 	display: none;
 }
-
 .post-content .pmpro_content_message a{
 	color: #ffffff;
 	font-size: .81rem;
@@ -259,109 +180,85 @@ div.uimob800 .um-account-side li a.current:hover,
 	border: none;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
-
 .um-account-profile-link{
-    display: none !important;
+	display: none !important;
 }
-
 .pmpro_confirmation_wrap a{
 	display: none !important;
 }
-
 .um-account-meta{
 	display: none !important;
 }
-
 .pmpro_checkout-h3-msg{
 	display: none !important;
 }
-
 #featured-section .pmpro_content_message{
 	display: none !important;
 }
-
 /* Table of Contents */
 #ezw_tco-2 .ez-toc-widget-container {
 	padding-top: 40px;
 }
-
 .ez-toc-title-container {
 	display: block;
 	margin-bottom: 20px;
-    font-size: 2em;
+	font-size: 2em;
 	font-weight: 300;
-    line-height: 1.5;
+	line-height: 1.5;
 	color: #ffffff;
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 1px solid #2e2e2e;
 }
-
 .ez-toc-list {
 	padding: 0px !important;
 }
-
 .ez-toc-heading-level-3 {
 	padding: 0px !important;
 }
-
 .ez-toc-heading-level-4 {
 	padding: 0px !important;
 }
-
 .ez-toc-heading-level-5 {
 	padding: 0px !important;
 }
-
 .ez-toc-heading-level-6 {
 	padding: 0px !important;
 }
-
 .ez-toc-list a {
 	padding-left: 20px;
 	font-size: 1.5em;
 	font-weight: 100;
 	color: #ffffff;
 }
-
 .ez-toc-list li {
 	padding: 20px 10px 20px 10px;
 }
-
 .ez-toc-widget-container li.active a {
-    font-weight: 400;
+	font-weight: 400;
 }
-
 .ez-toc-list li.active {
 	background-color: #2e2e2e;
 }
-
-/*
- * Checkout Page 
-*/
+/* * Checkout Page */
 .pmpro_checkout-fields input {
 	border: 2px solid #f0f2f5;
 	border-radius: 3px;
 	line-height: 2.5;
 }
-
 .pmpro_checkout-fields p {
 	display: none;
 }
-
 #pmpro_license p {
 	display: block !important;
 }
-
 #pmpro_level_cost p {
 	display: block !important;
 	font-size: 1.5em;
 }
-
 #pmpro_pricing_fields h3 {
 	display: none;
 }
-
 #pmpro_btn-submit {
 	color: inherit;
 	text-transform: uppercase;
@@ -381,18 +278,13 @@ div.uimob800 .um-account-side li a.current:hover,
 	color: #ffffff;
 	background-color: #3f51b5;
 }
-
 .pmpro_asterisk {
 	color: #e80000 !important;
 }
-
-/*
- * Contact Form
-*/
+/* * Contact Form */
 .nf-form-fields-required {
 	text-align: center;
 }
-
 #nf-field-4 {
 	color: inherit;
 	text-transform: uppercase;
@@ -412,21 +304,17 @@ div.uimob800 .um-account-side li a.current:hover,
 	color: #ffffff;
 	background-color: #3f51b5;
 }
-
 .nf-field-label label {
 	font-weight: 500 !important;
 }
-
 .nf-response-msg {
 	text-align: center;
 	font-weight: 600;
 	font-size: 1.3em;
 }
-
 .nf-field-element input{
 	border-radius: 3px !important;
 }
-
 .nf-field-element textarea{
 	border-radius: 3px !important;
 }
