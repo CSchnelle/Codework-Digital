@@ -44,7 +44,35 @@ Author: Codework Digital
 	flex: 1 1 auto;
 }
 
-.wide-container {
+.hoverable-shade:hover {
+	background-color: rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 4px 12px 0 rgba(0,0,0,0.12);
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.hoverable-shade {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.text-hover {
+	color: #000;
+}
+
+.text-hover:hover {
+	color: rgba(0, 0, 0, 0.8) !important;
+	background-color: transparent;
+}
+
+.text-small {
+	font-size: .90em;
+}
+
+.wider-container {
 	width: 100%;
     padding-right: 30px !important;
     padding-left: 30px !important;
@@ -91,6 +119,14 @@ body {
     background-position: center;
 	object-fit: cover;
     height: 500px;
+}
+
+.lessons-img {
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+	object-fit: cover;
+    height: auto;
 }
 
 section {
@@ -344,4 +380,53 @@ div.uimob800 .um-account-side li a.current:hover,
 	font-size: .81rem;
 	color: #ffffff;
 	background-color: #3f51b5;
+}
+
+.pmpro_asterisk {
+	color: #e80000 !important;
+}
+
+/*
+ * Contact Form
+*/
+.nf-form-fields-required {
+	text-align: center;
+}
+
+#nf-field-4 {
+	color: inherit;
+	text-transform: uppercase;
+	word-wrap: break-word;
+	white-space: normal;
+	cursor: pointer;
+	border: 0;
+	border-radius: .125rem;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	-webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+	padding: .84rem 2.14rem;
+	font-size: .81rem;
+	color: #ffffff;
+	background-color: #3f51b5;
+}
+
+.nf-field-label label {
+	font-weight: 500 !important;
+}
+
+.nf-response-msg {
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.nf-field-element input{
+	border-radius: 3px !important;
+}
+
+.nf-field-element textarea{
+	border-radius: 3px !important;
 }

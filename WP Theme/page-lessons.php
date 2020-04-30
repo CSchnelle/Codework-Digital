@@ -4,115 +4,800 @@
     <main>
         <section>
             <div class="container">
-				
-				<?php
-					$args = array( 
-						'posts_per_page' => -1
-					);
+				<h1 class="mb-2 display-4 font-weight-normal mb-5">All Lessons</h1>
+				<h2 class="mb-2 mt-5 font-weight-light">Some lessons to get you started</h2>
+				<hr class="mb-5 mt-0">
 
-					$query = new WP_Query($args);   
-					$q = array();
+						<!--Grid row-->
+						<div class="row wow fadeIn">
+							<?php
+								$catquery = new WP_Query(  array( 'category_name' => 'lessons page featured' ) ); 
+							?>
+							
+							<?php
+								if ( $catquery->have_posts() ) {
+								$counter = 1;
+								while ( $catquery->have_posts() ) {
+								$catquery->the_post();
+							?>
 
-					while ( $query->have_posts() ) { 
-						$query->the_post(); 
-						$a = '<a href="'. get_permalink() .'">' . get_the_post_thumbnail() . get_the_title() . get_the_excerpt() .'</a>';
-						$categories = get_the_category();
+							<!--Grid column-->
+							<div class="col-xl-4 mb-4 d-flex">
+								<div id="featured-section" class="card mdb-color lighten-2">
 
-						foreach ( $categories as $key=>$category ) {
-							$b = '<a href="' . get_category_link( $category ) . '">' . $category->name . '</a>';    
-						}
+									<!--Featured image-->
+									<div class="view overlay rounded">
+										<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'img-fluid')); ?>
+										<a href="<?php echo get_permalink() ?>">
+											<div class="mask"></div>
+										</a>
+									</div>
 
-						$q[$b][] = $a; // Create an array with the category names and post titles 
-					}
+									<!--Excerpt-->
+									<div class="card-body text-center white-text d-flex flex-column">
+										
+										<h4 class="mb-3 font-weight-bold text-center">
+											<strong><?php the_title(); ?></strong>
+										</h4>
+											<?php  echo '<p class="text-left">' . get_the_excerpt() . '</p>' ?>
+											<a href="<?php echo get_permalink() ?>" class="btn btn-outline-white btn-md mt-auto waves-effect">Read More</a>
+									</div>
+								</div>
+							</div>
+							<!--Grid column-->
 
-					/* Restore original Post Data */
-					wp_reset_postdata();
-
-					foreach ($q as $key=>$values) {
-						echo $key;
-
-						echo '<ul>';
-							foreach ($values as $value){
-								echo '<li>' . $value . '</li>';
-							}
-						echo '</ul>';
-					}
-				?>
-            </div>
-        </section>
-
-        <section class="indigo grey lighten-2">
-            <div class="container">
-				<?php
-					// Transients API all categories and all posts
-					$query_categories = get_transient('cached_categories');
-					if ( false === $query_categories){
-						$args_cat = array(
-							// order by category name ascending
-							'orderby' => 'name',
-							'order' => 'ASC',
-							// get only top level categories
-							'parent' => 0
-						);
-						// Instead of caching a WP Query I cache 'get_categories()'.
-						$query_categories = get_categories($args_cat);
-						// var_dump($query_categories);
-						set_transient('cached_categories', $query_categories, DAY_IN_SECONDS );
-					}
-
-					// Full posts query
-					// if there are categories filled with posts
-					if (!empty ($query_categories) && !is_wp_error( $query_categories )) {
-
-						foreach ($query_categories as $category) {
-
-							// var_dump($category);
-							$query_category_posts = get_transient('cached_posts_' . $category->slug );
-							if ( false === $query_category_posts ){
-
-								// Query all posts by slug inside each category
-								$args_category_posts = array(
-									'post_type' => 'post',
-									// The category slug and category name we get from the foreach over all categories
-									'category_name' => $category->slug
-								);
-
-								// Here I cache the WP_Query, though this runs for all categories.
-								// Because of that the '$category->slug' is used to serve a string and not an object.
-								$query_category_posts = new WP_Query($args_category_posts);         
-								set_transient( 'cached_posts_' . $category->slug , $query_category_posts, DAY_IN_SECONDS );
-							}
-
-							if ($query_category_posts->have_posts()) {
-								while ($query_category_posts->have_posts()) {
-									$query_category_posts->the_post(); ?>
-									
-									<article class="<?php echo $category->slug ?>-article">
-										<h1 class="">
-											
-										</h1>
-										<h2 class="<?php echo $category->slug ?>-article-title">
-											<a href="<?php echo get_permalink() ?>"><?php echo get_the_title() ?></a>
-										</h2>
-										<div <?php post_class() ?> >
-											<?php the_excerpt(); ?>
-										</div>
-									</article> <?php
-								}
-							} // end loop
-						} // end foreach
-					wp_reset_postdata() ;
-					} // end if there are categories filled with posts
-				?>
-				
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-	
+						  <?php
+						  if ($counter % 3 == 0) {
+						  ?>
+						  </div>
+						  <!--Grid row-->
+						  <!--Grid dynamic row-->
+						 <div class="row wow fadeIn">
+							  <?php
+							  }
+							  $counter++;
+							  } // end while
+							  } // end if
+							  ?>
+						</div>
+				<!--Grid row-->
 			</div>
-        </section>
+		</section>
+		
+		<!--Category section-->
+		<?php if (get_category('39')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('39')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 39 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('40')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('40')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 40 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('41')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('41')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 41 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('42')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('42')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 42 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('43')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('43')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 43 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('44')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('44')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 44 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('45')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('45')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 45 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('46')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('46')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 46 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+				<!--Category section-->
+		<?php if (get_category('47')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('47')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 47 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('48')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('48')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 48 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('49')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('49')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 49 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('50')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('50')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 50 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('51')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('51')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 51 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('52')->category_count > 0) {?>
+		<section>
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('52')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 52 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
+		
+		<!--Category section-->
+		<?php if (get_category('53')->category_count > 0) {?>
+		<section class="grey lighten-2">
+				<div class="container mb-3">
+					<h2 class="mb-2 font-weight-light"><?php echo get_category('53')->cat_name; ?></h2>
+					<hr class="mb-4 mt-0">
+
+							<?php
+								$catquery = new WP_Query(  array( 'cat' => 53 ) ); 
+								if ( $catquery->have_posts() ) {
+									while ( $catquery->have_posts() ) {
+										$catquery->the_post();
+							?>
+					
+								<!--Grid row-->
+								<div class="row wow fadeIn position-relative mb-2 py-3 hoverable-shade rounded">
+
+									<!--Grid column-->
+									<div class="col-md-3 position-static">
+										<!--Featured image-->
+										<div class="view overlay rounded z-depth-1">
+											<?php the_post_thumbnail( 'medium-large', array( 'class'=> 'lessons-img img-fluid')); ?>
+										</div>
+									</div>
+
+									<div class="col-md-9 position-static">
+										<!--Excerpt-->
+										<div class="">
+											<a href="<?php echo get_permalink() ?>" class="stretched-link">
+											<h4 class="mb-3 font-weight-bold text-left text-dark pt-2">
+												<strong><?php the_title(); ?></strong>
+											</h4>
+											<?php  echo '<p class="text-left text-muted">' . get_the_excerpt() . '</p>' ?>
+											</a>
+										</div>
+									</div>
+									<!--Grid column-->
+
+								</div>
+								<!--Grid row-->
+								<?php
+										}
+									}
+								?>
+				</div>
+		</section>
+		<?php } ?>
+		<!--Category section-->
 
     </main>
     <!--Main layout-->

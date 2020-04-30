@@ -16,7 +16,7 @@
                     <div class="mb-4 d-none d-md-block">
                         <h2>Join The Talk Made Simple to learn, discover, and understand.</h2>
                     </div>
-                    <a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-indigo btn-lg mt-4">Sign Up Now</a>
+					<a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-indigo btn-lg mt-4">Learn More</a>
                 </div>
                 <!--Grid column-->
 
@@ -28,12 +28,11 @@
     </div>
     <!-- Mask & flexbox options-->
 </div>
-<!-- Full Page Intro Chanse S 3/25 -->
 
 <!--Main layout-->
     <main>
         <section>
-            <div class="wide-container text-center px-0">
+            <div class="wider-container text-center px-0">
 
                 <h1 class="font-weight-bold">Let Us Help You</h1>
 
@@ -42,7 +41,7 @@
 						<!--Grid row-->
 						<div class="row wow fadeIn">
 							<?php
-								$catquery = new WP_Query(  array( 'category_name' => 'featured' ) ); 
+								$catquery = new WP_Query(  array( 'category_name' => 'front page featured' ) ); 
 							?>
 							
 							<?php
@@ -97,55 +96,59 @@
             </div>
         </section>
 
-        <section class="indigo grey lighten-2">
-            <div class="container px-0">
+        <section class="grey lighten-2">
+            <div class="wider-container">
+				<div class="row wow fadeIn">
+					<div class="col-md-10 offset-md-1">
 
-                <!-- Jumbotron -->
-                <div class="jumbotron mb-0 text-center indigo white-text rounded">
+						<!-- Jumbotron -->
+						<div class="jumbotron mb-0 text-center indigo white-text rounded">
 
-                    <!-- Title -->
-                    <h2 class="card-title mb-5 h2">What it's all about!</h2>
+							<!-- Title -->
+							<h2 class="card-title mb-5 h2">What it's all about!</h2>
 
-                    <!-- Row -->
-                    <div class="row">
+							<!-- Row -->
+							<div class="row">
 
-                        <!-- Grid column -->
-                        <div class="col-md-4 mb-1">
-                            <!-- Subtitle -->
-                            <p class="my-1 h6">Course Curriculum</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
-                        </div>
-                        <!-- Grid column -->
+								<!-- Grid column -->
+								<div class="col-md-4 mb-1">
+									<!-- Subtitle -->
+									<p class="my-1 h6">Course Curriculum</p>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+								</div>
+								<!-- Grid column -->
 
-                        <!-- Grid column -->
-                        <div class="col-md-4 mb-1">
-                            <!-- Subtitle -->
-                            <p class="my-1 h6">Information That Works</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
-                        </div>
-                        <!-- Grid column -->
+								<!-- Grid column -->
+								<div class="col-md-4 mb-1">
+									<!-- Subtitle -->
+									<p class="my-1 h6">Information That Works</p>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+								</div>
+								<!-- Grid column -->
 
-                        <!-- Grid column -->
-                        <div class="col-md-4 mb-1">
-                            <!-- Subtitle -->
-                            <p class="my-1 h6">Your Trusted Source</p>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
-                        </div>
-                        <!-- Grid column -->
+								<!-- Grid column -->
+								<div class="col-md-4 mb-1">
+									<!-- Subtitle -->
+									<p class="my-1 h6">Your Trusted Source</p>
+									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga aliquid dolorem ea distinctio exercitationem delectus qui, quas eum architecto, amet quasi accusantium.</p>
+								</div>
+								<!-- Grid column -->
 
-                    </div>
-                    <!-- Row -->
+							</div>
+							<!-- Row -->
 
-                    <hr class="my-4 rgba-white-light">
+							<hr class="my-4 rgba-white-light">
 
-                    <div class="pt-2">
-                        <a target="_self" href="<? echo site_url('get-started'); ?>" class="btn btn-outline-white">Learn More</a>
-                    </div>
+							<div class="pt-2">
+								<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-outline-white">Sign Up Now</a>
+							</div>
 
-                </div>
-                <!-- Jumbotron -->
+						</div>
+						<!-- Jumbotron -->
 
-            </div>
+					</div>
+				</div>			
+			</div>
         </section>
 
         <section>
