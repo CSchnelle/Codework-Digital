@@ -1,3 +1,8 @@
+<!-- Written by: Chanse Stephens & Cat Schnelle -->
+<!-- Tested by: All -->
+<!-- Debugged by: Chanse Stephens & Cat Schnelle -->
+
+
 <?php  get_header(); ?>
 
     <div class="view full-page-intro front-page-img background-tint z-depth-1">
