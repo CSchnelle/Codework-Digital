@@ -1,3 +1,7 @@
+<!-- Written by: Kevin Sims & Chanse Stephens -->
+<!-- Tested by: All -->
+<!-- Debugged by: Chanse Stephens -->
+
 <!DOCTYPE html>
 <html lang="en">
 
