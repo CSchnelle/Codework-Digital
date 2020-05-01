@@ -1,3 +1,7 @@
+<!-- Written by: Chanse Stephens & Cat Schnelle -->
+<!-- Tested by: Chanse Stephens & Cat Schnelle -->
+<!-- Debugged by: Chanse Stephens -->
+
 <?php  get_header();?>
 
     <div class="view full-page-intro get-started-img pb-5 z-depth-1">
