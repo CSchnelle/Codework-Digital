@@ -1,3 +1,8 @@
+<-- Written by: Cat Schnelle & Chanse Stephens -->
+<-- Tested by: All -->
+<-- Debugged by: Cat Schnelle, Chanse Stephens -->
+	
+	
 <?php wp_footer(); ?>
 </body>
 <script>
