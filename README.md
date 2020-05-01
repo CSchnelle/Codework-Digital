@@ -13,7 +13,9 @@ Go to WP Theme for source code for project:
 
 
 Codework Digital folder contains \doc and \design:
+
 -- \doc contains all 3 Reports, Demo 1 & 2 Presentation slides, Brochures, and Contributions document. --
+
 -- \design contains all design diagrams including: Use Cases, Classes, Domain Model, Interaction Diagrams, Subsystems, and the Traceability Matrix. --
 
 
