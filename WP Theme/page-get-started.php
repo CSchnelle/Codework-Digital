@@ -1,15 +1,15 @@
 <?php  get_header();?>
 
-    <div class="view full-page-intro get-started-img z-depth-1">
+    <div class="view full-page-intro get-started-img pb-5 z-depth-1">
         <!-- Mask & flexbox options-->
         <div class="align-items-center">
             <!-- Content -->
-            <div class="container front-page-hero">
+            <div class="container mt-5">
                 <!--Grid row-->
                 <div class="row wow fadeIn">
                     <!--Grid column-->
-                    <div class="col-md-12 mb-4 white-text text-center">
-                        <h2 class="display-4 font-weight-normal">See what The Talk Made Simple can do for you and your FAMILY</h2>
+                    <div class="col-md-12 mb-4 white-text text-center mt-5">
+                        <h2 class="display-4 font-weight-normal">See what THE Talk Made Simple can do for you and your FAMILY</h2>
                     </div>
 				</div>
 				<!--Grid row-->
@@ -20,12 +20,12 @@
 					<div class="col-md-8">
 						<div class="mx-5">
 							<div class="card card-body mt-2 text-left p-5 grey lighten-2">
-								<h2 class="font-weight-normal">We help families talk about difficult topics in fun and easy ways</h2>
+								<h3 class="font-weight-normal text-center">We help families talk about difficult topics in fun and easy ways</h3>
 								<p>
 									If you've ever struggled to find the right words when discussing the importance of THE talk with your family then you've come to the right place.
 								</p>
 								<div class="text-center">
-									<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-indigo btn-lg mt-4">Sign Up Now</a>
+									<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>" class="btn btn-indigo btn-lg mt-3">Sign Up Now</a>
 								</div>
 							</div>
 						</div>
@@ -116,14 +116,13 @@
 
 						<h2 class="text-center font-weight-normal text-uppercase pb-0 mb-0">Here's the plan!</h2>
 						<!-- Stepers Wrapper -->
-						<ul class="stepper stepper-horizontal mt-0 mb-5 py-0">
+						<ul class="stepper stepper-horizontal mx-0 mt-0 mb-5 py-0">
 
 							<!-- First Step -->
-							<li class="completed">
+							<li class="active">
 								<a target="_self" href="<? echo site_url('membership/checkout/?level=1'); ?>">
 									<span class="circle">1</span>
 									<span class="label">Sign Up!</span>
-
 								</a>
 							</li>
 
@@ -139,7 +138,7 @@
 							<li class="active">
 								<a target="_self" href="<? echo site_url('contact'); ?>">
 									<span class="circle">3</span>
-									<span class="label">Tell us about your success!</span>
+									<span class="label">Share your success!</span>
 								</a>
 							</li>
 
@@ -153,7 +152,7 @@
 
 				<div class="row wow fadeIn">
 					
-					<div class="col-md-4">	
+					<div class="col-md-4 mb-3">	
 						<!-- Card -->
 						<div class="card">
 						  <!-- Card image -->
@@ -172,7 +171,7 @@
 						<!-- Card -->			
 					</div>
 					
-					<div class="col-md-4">	
+					<div class="col-md-4 mb-3">	
 						<!-- Card -->
 						<div class="card">
 						  <!-- Card image -->
@@ -191,7 +190,7 @@
 						<!-- Card -->			
 					</div>
 					
-					<div class="col-md-4">	
+					<div class="col-md-4 mb-3">	
 						<!-- Card -->
 						<div class="card">
 						  <!-- Card image -->
