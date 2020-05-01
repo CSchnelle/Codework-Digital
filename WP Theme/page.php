@@ -1,3 +1,7 @@
+<!-- Written by: Elijah Pemberton -->
+<!-- Tested by: All -->
+<!-- Debugged by: Chanse Stephens -->
+
 <?php  
 
 get_header();
