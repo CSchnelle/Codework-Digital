@@ -1,4 +1,4 @@
-<!--Written by: Chanse Stephens -->
+<!--Written by: Elijah Pemberton & Chanse Stephens -->
 <!--Tested by: Chanse Stephens -->
 <!--Debugged by: Chanse Stephens -->
 
