@@ -1,4 +1,4 @@
-<!-- Written by: Elijah Pemberton -->
+<!-- Written by: Elijah Pemberton & Kevin Sims -->
 <!-- Tested by: Chanse Stephens & Elijah Pemberton -->
 <!-- Debugged by: Chanse Stephens & Elijah Pemberton -->
 
