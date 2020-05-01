@@ -1,10 +1,14 @@
 # Codework-Digital
 
 Go to WP Theme for source code for project:
+
 -- Folders at WPTheme\ contain styling and UI elements for the page.
+
 -- Files at WPTheme\ contain the source code for each page with author details at the top.
 
+
 -- Image files at root folder are client specific --
+
 -- Image files at WPTheme\Images are UI specific. --
 
 
