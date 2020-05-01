@@ -1,3 +1,8 @@
+<!--Written by: Chanse Stephens -->
+<!--Tested by: Chanse Stephens -->
+<!--Debugged by: Chanse Stephens -->
+
+
 <?php  get_header();
 if ( have_posts() ) {
 while ( have_posts() ) {
