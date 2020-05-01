@@ -1,3 +1,7 @@
+<!-- Written by: Chanse Stephens -->
+<!-- Tested by: All -->
+<!-- Debugged by: Chanse Stephens -->
+
 <?php  get_header();?>
 <!--Main layout-->
 <main>
