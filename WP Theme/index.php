@@ -1,3 +1,7 @@
+<!-- Written by: Kevin Sims -->
+<!-- Tested by: Chanse Stephens & Kevin Sims -->
+<!-- Debugged by: Chanse Stephens -->
+
 <?php get_header(); ?>
 
 <!--Main layout-->
