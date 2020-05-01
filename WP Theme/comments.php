@@ -1,3 +1,7 @@
+<!-- Implemented by: Chanse Stephens -->
+<!-- Tested by: Chanse Stephens -->
+<!-- Debugged by: Chanse Stephens -->
+
 <?php
 /**
  * The template for displaying Comments.
